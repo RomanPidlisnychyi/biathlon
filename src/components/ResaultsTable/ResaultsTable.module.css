@@ -1,0 +1,15 @@
+.table {
+  margin: 0 auto;
+}
+
+.table th {
+  background-color: #c2dff3;
+}
+
+.table td {
+  padding: 5px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  text-align: center;
+  background-color: #e7f3fa;
+}

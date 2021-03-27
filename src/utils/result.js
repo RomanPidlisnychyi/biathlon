@@ -3,6 +3,7 @@ export const result = participants =>
     ...participant,
     lie: +parseFloat(getRandomArbitrary(85, 95)).toFixed(2),
     stand: +parseFloat(getRandomArbitrary(80, 95)).toFixed(2),
+    general: null,
     speed: +parseFloat(getRandomArbitrary(25, 30)).toFixed(2),
   }));
 
