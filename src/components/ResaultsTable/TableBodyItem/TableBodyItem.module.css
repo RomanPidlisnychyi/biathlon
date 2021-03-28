@@ -1,31 +1,39 @@
 .Austria {
-  background-image: url('https://www.biathlon.com.ua/en/uploads/0/9.gif');
+  background: url('https://www.biathlon.com.ua/en/uploads/0/9.gif') center / 50%
+    no-repeat;
 }
 
 .Ukraine {
+  composes: Austria;
   background-image: url('https://www.biathlon.com.ua/en/uploads/0/53.gif');
 }
 
 .Norway {
+  composes: Austria;
   background-image: url('https://www.biathlon.com.ua/en/uploads/0/41.gif');
 }
 
 .Belarus {
+  composes: Austria;
   background-image: url('https://www.biathlon.com.ua/en/uploads/0/12.gif');
 }
 
 .Slovenia {
+  composes: Austria;
   background-image: url('https://www.biathlon.com.ua/en/uploads/0/60.gif');
 }
 
 .Russia {
+  composes: Austria;
   background-image: url('https://www.biathlon.com.ua/en/uploads/0/48.gif');
 }
 
 .Germany {
+  composes: Austria;
   background-image: url('https://www.biathlon.com.ua/en/uploads/0/20.gif');
 }
 
 .Sweden {
+  composes: Austria;
   background-image: url('https://www.biathlon.com.ua/en/uploads/0/50.gif');
 }
