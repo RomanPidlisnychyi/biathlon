@@ -1,39 +1,21 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { getFilter } from './filterSelectors';
 
-export const getRaces = state =>
-  state.races.map(race => ({
-    ...race,
-    general: +parseFloat((race.lie + race.stand) / 2).toFixed(2),
-  }));
+export const getRaces = state => state.races;
 
 export const getFilteredRaces = createSelector(
   getRaces,
   getFilter,
   (races, filter) => {
     const filteredRaces = [...races];
-    if (filter === 'name') {
+    if (filter === 'name' || filter === 'country') {
       return filteredRaces.sort(function (a, b) {
-        const nameA = a.name.toUpperCase();
-        const nameB = b.name.toUpperCase();
+        const nameA = a[filter].toUpperCase();
+        const nameB = b[filter].toUpperCase();
         if (nameA < nameB) {
           return -1;
         }
         if (nameA > nameB) {
-          return 1;
-        }
-
-        return 0;
-      });
-    }
-    if (filter === 'country') {
-      return filteredRaces.sort(function (a, b) {
-        const countryA = a.country.toUpperCase();
-        const countryB = b.country.toUpperCase();
-        if (countryA < countryB) {
-          return -1;
-        }
-        if (countryA > countryB) {
           return 1;
         }
 
